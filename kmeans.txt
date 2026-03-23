@@ -1,0 +1,63 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     weka_reduced_10_attributes
+Instances:    1100
+Attributes:   10
+              courserating_High
+              courserating_Low
+              courserating_Medium
+              attendance_High
+              attendance_Low
+              difficultylevel_High
+              difficultylevel_Low
+              coursecontentquality_High
+              coursecontentquality_Low
+              coursecontentquality_Medium
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 2
+Within cluster sum of squared errors: 2312.0
+
+Initial starting points (random):
+
+Cluster 0: False,True,False,True,False,True,False,True,False,False
+Cluster 1: True,False,False,True,False,True,False,True,False,False
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                           Cluster#
+Attribute                      Full Data          0          1
+                                (1100.0)    (662.0)    (438.0)
+==============================================================
+courserating_High                  False      False       True
+courserating_Low                   False       True      False
+courserating_Medium                False      False      False
+attendance_High                     True       True       True
+attendance_Low                     False      False      False
+difficultylevel_High                True       True       True
+difficultylevel_Low                False      False      False
+coursecontentquality_High          False      False      False
+coursecontentquality_Low           False      False      False
+coursecontentquality_Medium        False      False      False
+
+
+
+
+Time taken to build model (full training data) : 0.04 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       662 ( 60%)
+1       438 ( 40%)
+

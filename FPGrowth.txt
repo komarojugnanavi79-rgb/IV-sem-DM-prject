@@ -1,0 +1,31 @@
+=== Run information ===
+
+Scheme:       weka.associations.FPGrowth -P 2 -I -1 -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1
+Relation:     weka_reduced_10_attributes
+Instances:    1100
+Attributes:   10
+              courserating_High
+              courserating_Low
+              courserating_Medium
+              attendance_High
+              attendance_Low
+              difficultylevel_High
+              difficultylevel_Low
+              coursecontentquality_High
+              coursecontentquality_Low
+              coursecontentquality_Medium
+=== Associator model (full training set) ===
+
+FPGrowth found 12 rules (displaying top 10)
+
+ 1. [coursecontentquality_Low=True]: 438 ==> [coursecontentquality_Medium=False]: 438   <conf:(1)> lift:(1.26) lev:(0.08) conv:(90.39) 
+ 2. [coursecontentquality_High=True]: 435 ==> [coursecontentquality_Medium=False]: 435   <conf:(1)> lift:(1.26) lev:(0.08) conv:(89.77) 
+ 3. [difficultylevel_Low=False]: 724 ==> [difficultylevel_High=True]: 724   <conf:(1)> lift:(1.52) lev:(0.22) conv:(247.48) 
+ 4. [difficultylevel_High=True]: 724 ==> [difficultylevel_Low=False]: 724   <conf:(1)> lift:(1.52) lev:(0.22) conv:(247.48) 
+ 5. [courserating_Low=True]: 459 ==> [courserating_High=False]: 459   <conf:(1)> lift:(1.66) lev:(0.17) conv:(182.77) 
+ 6. [coursecontentquality_Medium=False, difficultylevel_Low=False]: 573 ==> [difficultylevel_High=True]: 573   <conf:(1)> lift:(1.52) lev:(0.18) conv:(195.86) 
+ 7. [coursecontentquality_Medium=False, difficultylevel_High=True]: 573 ==> [difficultylevel_Low=False]: 573   <conf:(1)> lift:(1.52) lev:(0.18) conv:(195.86) 
+ 8. [coursecontentquality_Medium=False, courserating_Low=True]: 367 ==> [courserating_High=False]: 367   <conf:(1)> lift:(1.66) lev:(0.13) conv:(146.13) 
+ 9. [difficultylevel_Low=False, courserating_High=False]: 447 ==> [difficultylevel_High=True]: 447   <conf:(1)> lift:(1.52) lev:(0.14) conv:(152.79) 
+10. [difficultylevel_High=True, courserating_High=False]: 447 ==> [difficultylevel_Low=False]: 447   <conf:(1)> lift:(1.52) lev:(0.14) conv:(152.79) 
+
